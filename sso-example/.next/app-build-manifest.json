@@ -1,0 +1,37 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/87847_next_dist_ab92c647._.js",
+      "static/chunks/examples_sso-example_app_favicon_ico_mjs_1e61ba6b._.js",
+      "static/chunks/[root-of-the-server]__26f24a3d._.css",
+      "static/chunks/examples_sso-example_app_layout_tsx_1c3a274b._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_435867c6._.js",
+      "static/chunks/87847_next_dist_compiled_react-dom_582b25cb._.js",
+      "static/chunks/87847_next_dist_compiled_next-devtools_index_e01f1222.js",
+      "static/chunks/87847_next_dist_compiled_97180f7a._.js",
+      "static/chunks/87847_next_dist_client_07545c33._.js",
+      "static/chunks/87847_next_dist_b85a6064._.js",
+      "static/chunks/87847_@swc_helpers_cjs_a0b0984c._.js",
+      "static/chunks/examples_sso-example_e69f0d32._.js",
+      "static/chunks/examples_sso-example_28cccc37._.js"
+    ],
+    "/page": [
+      "static/chunks/87847_next_dist_ab92c647._.js",
+      "static/chunks/examples_sso-example_app_favicon_ico_mjs_1e61ba6b._.js",
+      "static/chunks/[root-of-the-server]__26f24a3d._.css",
+      "static/chunks/examples_sso-example_app_layout_tsx_1c3a274b._.js",
+      "static/chunks/87847_next_dist_client_components_builtin_global-error_c07b2c63.js",
+      "static/chunks/_a731ce7d._.js",
+      "static/chunks/examples_sso-example_app_page_tsx_c07b2c63._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_435867c6._.js",
+      "static/chunks/87847_next_dist_compiled_react-dom_582b25cb._.js",
+      "static/chunks/87847_next_dist_compiled_next-devtools_index_e01f1222.js",
+      "static/chunks/87847_next_dist_compiled_97180f7a._.js",
+      "static/chunks/87847_next_dist_client_07545c33._.js",
+      "static/chunks/87847_next_dist_b85a6064._.js",
+      "static/chunks/87847_@swc_helpers_cjs_a0b0984c._.js",
+      "static/chunks/examples_sso-example_e69f0d32._.js",
+      "static/chunks/examples_sso-example_28cccc37._.js"
+    ]
+  }
+}

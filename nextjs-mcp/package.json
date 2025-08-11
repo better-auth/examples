@@ -1,0 +1,29 @@
+{
+  "name": "@better-auth/nextjs-mcp-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@vercel/mcp-adapter": "^0.11.2",
+    "better-auth": "workspace:^",
+    "better-sqlite3": "^11.10.0",
+    "next": "15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^20",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.9.2"
+  }
+}
