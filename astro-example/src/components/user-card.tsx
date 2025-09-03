@@ -105,13 +105,14 @@ export function UserCard(props: {
 										class="text-red-500 opacity-80  cursor-pointer text-xs border-muted-foreground border-red-600  underline "
 										onClick={async () => {
 											const res = await revokeSession({
-												id: activeSession.id,
+												token: activeSession.token,
 											});
 
 											if (res.error) {
 												alert(res.error.message);
 											} else {
 												alert("Session terminated");
+												window.location.reload();
 											}
 										}}
 									>

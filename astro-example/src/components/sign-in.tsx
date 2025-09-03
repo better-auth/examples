@@ -87,7 +87,14 @@ export function SignInCard() {
 						>
 							Sign In
 						</Button>
-						<Button class="gap-2" variant="outline">
+						<Button class="gap-2" 
+							variant="outline" 
+							onClick={async () => {
+								await signIn.social({
+									provider: "github",
+									callbackURL: "/dashboard",
+								});
+							}}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="1.2em"
@@ -147,9 +154,9 @@ export function SignInCard() {
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
-								strokeWidth="2"
-								strokeLinecap="round"
-								strokeLinejoin="round"
+								stroke-Width="2"
+								stroke-Linecap="round"
+								stroke-Linejoin="round"
 								class="lucide lucide-key"
 							>
 								<path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4" />
