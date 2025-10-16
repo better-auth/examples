@@ -1,0 +1,23 @@
+{
+  "name": "@monorepo-example/api",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsdown",
+    "start": "node dist/index.js",
+    "dev": "tsdown --watch --on-success \"node dist/index.js\""
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@monorepo-example/auth": "workspace:*",
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.1"
+  },
+  "devDependencies": {
+    "@monorepo-example/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "@monorepo-example/nextjs",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "next build --turbo",
+        "dev": "next dev -p 3000 --turbo",
+        "lint": "next lint",
+        "typecheck": "tsc --noEmit",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^15.5.5",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0",
+        "@monorepo-example/auth": "workspace:*"
+    },
+    "devDependencies": {
+        "@monorepo-example/typescript-config": "workspace:*",
+        "@tailwindcss/postcss": "^4.1.11",
+        "@types/node": "catalog:",
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
+        "tailwindcss": "^4.1.11",
+        "typescript": "catalog:"
+    }
+}

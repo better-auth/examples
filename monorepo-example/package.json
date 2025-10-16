@@ -1,0 +1,21 @@
+{
+  "name": "@monorepo-example/root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "turbo run start",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=18"
+  }
+}

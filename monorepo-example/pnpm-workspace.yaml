@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+
+catalog:
+  tsdown: ^0.15.7
+  typescript: ^5.9.3
+  "@types/node": ^20
+
+onlyBuiltDependencies:
+  - better-sqlite3

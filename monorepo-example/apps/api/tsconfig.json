@@ -1,0 +1,16 @@
+{
+    "exclude": ["node_modules"],
+    "extends": "@monorepo-example/typescript-config/base.json",
+    "compilerOptions": {
+        "declarationMap": false,
+        "declaration": false,
+        "lib": ["es2021"],
+        "module": "node16",
+        "target": "es2021",
+
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node16"
+    },
+}
