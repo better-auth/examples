@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "turbo run start",
-    "clean": "turbo run clean",
-    "dev": "turbo run dev",
-    "build": "turbo run build",
+    "apps:build": "turbo --filter \"./apps/*\" build",
+    "apps:dev": "turbo --filter \"./apps/*\" dev",
+    "apps:start": "turbo --filter \"./apps/*\" start",
+    "clean": "turbo --filter \"./packages/*\" clean && rm -rf node_modules",
+    "dev": "turbo --filter \"./packages/*\" dev",
+    "build": "turbo --filter \"./packages/*\" build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck"
   },

@@ -1,16 +1,16 @@
 "use client";
 
 import { authClient } from "@/lib/authClient";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SignIn() {
+    const router = useRouter();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const session = authClient.useSession();
 
     return (
         <div className="flex flex-col gap-4 p-4">
-            {JSON.stringify({ session })}
             <h1 className="font-bold text-2xl">Sign In</h1>
             <div>
                 <p>Email</p>
@@ -36,19 +36,16 @@ export default function SignIn() {
                     const { error } = await authClient.signIn.email({
                         email,
                         password,
+                        fetchOptions: {
+                            onSuccess: () => {
+                                router.replace(process.env.NEXT_PUBLIC_DASHBOARD_URL || "http://localhost:3001");
+                            },
+                        },
                     });
                 }}
             >
                 <p>Sign In</p>
             </button>
-            <button
-				className="border-white text-white"
-				onClick={async () => {
-					const { error } = await authClient.signOut();
-				}}
-			>
-				<p>Logout</p>
-			</button>
         </div>
     )
 }

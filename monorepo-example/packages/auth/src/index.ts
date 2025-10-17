@@ -1,4 +1,5 @@
 import { betterAuth } from "better-auth";
+import { env, isDevelopment, isProduction } from "@monorepo-example/env";
 
 export const auth = betterAuth({
     // Add a database for production at minimum.
@@ -14,26 +15,27 @@ export const auth = betterAuth({
 			console.log("Send email to reset password");
 		},
 	},
-	trustedOrigins: [process.env.CLIENT_ORIGIN || "http://localhost:3000"],
+	trustedOrigins: env.CLIENT_ORIGIN ? env.CLIENT_ORIGIN.split(",") : ["http://localhost:*"],
 	advanced: {
-		useSecureCookies: process.env.NODE_ENV === "production",
+		useSecureCookies: isProduction,
 		crossSubDomainCookies: {
-			enabled: process.env.NODE_ENV === "production",
+			enabled: isProduction,
 			domain: ".example.com"
-		}
+		},
+		disableCSRFCheck: isDevelopment,
 	},
 	socialProviders: {
 		google: {
-			clientId: process.env.GOOGLE_CLIENT_ID || "",
-			clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+			clientId: env.GOOGLE_CLIENT_ID || "",
+			clientSecret: env.GOOGLE_CLIENT_SECRET || "",
 		},
 		github: {
-			clientId: process.env.GITHUB_CLIENT_ID || "",
-			clientSecret: process.env.GITHUB_CLIENT_SECRET || "",
+			clientId: env.GITHUB_CLIENT_ID || "",
+			clientSecret: env.GITHUB_CLIENT_SECRET || "",
 		},
 		discord: {
-			clientId: process.env.DISCORD_CLIENT_ID || "",
-			clientSecret: process.env.DISCORD_CLIENT_SECRET || "",
+			clientId: env.DISCORD_CLIENT_ID || "",
+			clientSecret: env.DISCORD_CLIENT_SECRET || "",
 		},
 	},
-})
+});

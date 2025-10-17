@@ -1,5 +1,5 @@
 {
-    "name": "@monorepo-example/nextjs",
+    "name": "@monorepo-example/web",
     "version": "0.0.0",
     "type": "module",
     "private": true,
@@ -18,11 +18,11 @@
     },
     "devDependencies": {
         "@monorepo-example/typescript-config": "workspace:*",
-        "@tailwindcss/postcss": "^4.1.11",
         "@types/node": "catalog:",
         "@types/react": "^19.2.2",
         "@types/react-dom": "^19.2.2",
-        "tailwindcss": "^4.1.11",
+        "@tailwindcss/postcss": "catalog:tailwind",
+        "tailwindcss": "catalog:tailwind",
         "typescript": "catalog:"
     }
 }

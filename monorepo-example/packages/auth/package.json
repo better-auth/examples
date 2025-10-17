@@ -31,6 +31,16 @@
                 "default": "./dist/client/react.cjs"
             }
         },
+        "./solid": {
+            "import": {
+                "types": "./dist/client/solid.d.ts",
+                "default": "./dist/client/solid.js"
+            },
+            "require": {
+                "types": "./dist/client/solid.d.cts",
+                "default": "./dist/client/solid.cjs"
+            }
+        },
         "./types": {
             "import": {
                 "types": "./dist/types.d.ts",
@@ -43,13 +53,17 @@
         }
     },
     "dependencies": {
-        "better-auth": "latest"
+        "better-auth": "latest",
+        "@monorepo-example/env": "workspace:*"
     },
     "devDependencies": {
         "@monorepo-example/typescript-config": "workspace:*",
+        "@types/bun": "catalog:",
         "@types/node": "catalog:",
         "tsdown": "catalog:",
         "typescript": "catalog:"
     },
-    "files": ["dist"]
+    "files": [
+        "dist"
+    ]
 }

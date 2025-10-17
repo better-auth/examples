@@ -3,7 +3,6 @@
     "compilerOptions": {
         "rootDir": "./src",
         "outDir": "./dist",
-        "skipLibCheck": true,
         "lib": ["esnext", "dom", "dom.iterable"],
         "types": ["node", "bun"]
     },

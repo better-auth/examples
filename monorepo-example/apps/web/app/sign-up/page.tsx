@@ -1,17 +1,17 @@
 "use client";
 
 import { authClient } from "@/lib/authClient";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SignUp() {
+    const router = useRouter();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const session = authClient.useSession();
 
     return (
         <div className="flex flex-col gap-4 p-4">
-            {JSON.stringify({ session })}
             <h1 className="font-bold text-2xl">Sign Up</h1>
             <div>
                 <p>Name</p>
@@ -47,19 +47,16 @@ export default function SignUp() {
                         email,
                         name,
                         password,
+                        fetchOptions: {
+                            onSuccess: () => {
+                                router.replace(process.env.NEXT_PUBLIC_DASHBOARD_URL || "http://localhost:3001");
+                            },
+                        },
                     });
                 }}
             >
                 <p>Sign Up</p>
             </button>
-            <button
-				className="border-white text-white"
-				onClick={async () => {
-					const { error } = await authClient.signOut();
-				}}
-			>
-				<p>Logout</p>
-			</button>
         </div>
     )
 }
