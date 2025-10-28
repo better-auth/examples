@@ -1,9 +1,12 @@
 import { betterAuth } from "better-auth";
-import Database from "better-sqlite3";
-import { twoFactor, passkey } from "better-auth/plugins";
+import { twoFactor } from "better-auth/plugins";
+import { passkey } from "better-auth/plugins/passkey";
+import { Pool } from 'pg'
 
 export const auth = betterAuth({
-	database: new Database("./sqlite.db"),
+  	database: new Pool({
+    	connectionString: process.env.DATABASE_URL,
+  	}),
 	emailAndPassword: {
 		enabled: true,
 		sendEmailVerificationOnSignUp: true,

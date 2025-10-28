@@ -1,6 +1,7 @@
 import { passkeyClient, twoFactorClient } from "better-auth/client/plugins";
 import { createAuthClient } from "better-auth/solid";
 import { createAuthClient as createVanillaClient } from "better-auth/client";
+
 export const {
 	signIn,
 	signOut,
@@ -21,10 +22,12 @@ export const {
 			: undefined,
 	plugins: [
 		passkeyClient(),
-		twoFactorClient({
-			twoFactorPage: "/two-factor",
-		}),
-	],
+        twoFactorClient({ 
+            onTwoFactorRedirect(){ 
+                window.location.href = "/two-factor"
+            } 
+        }) 
+	]
 });
 
 export const { useSession: useVanillaSession } = createVanillaClient({
