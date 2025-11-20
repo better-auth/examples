@@ -41,7 +41,7 @@ if (!session) {
       on:click={() => {
         client.signOut({
           fetchOptions: {
-            onSuccess: () => goto("/auth"),
+            onSuccess: () => goto("/"),
           },
         });
       }}>Sign Out</Button
