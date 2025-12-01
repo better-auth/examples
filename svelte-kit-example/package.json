@@ -12,7 +12,7 @@
 		"prepare": "svelte-kit sync"
 	},
 	"devDependencies": {
-		"@better-auth/cli": "workspace:*",
+		"@better-auth/cli": "^1.4.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.27.3",
 		"@sveltejs/vite-plugin-svelte": "^5.1.1",
@@ -28,7 +28,7 @@
 	"dependencies": {
 		"@internationalized/date": "^3.8.2",
 		"@types/better-sqlite3": "^7.6.13",
-		"better-auth": "workspace:*",
+		"better-auth": "^1.4.0",
 		"better-sqlite3": "^11.10.0",
 		"bits-ui": "^0.22.0",
 		"clsx": "^2.1.1",

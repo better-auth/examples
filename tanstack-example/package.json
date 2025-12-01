@@ -34,7 +34,7 @@
     "@tanstack/start": "^1.120.20",
     "@types/ua-parser-js": "^0.7.39",
     "@vitejs/plugin-react": "^4.7.0",
-    "better-auth": "workspace:*",
+    "better-auth": "^1.4.0",
     "better-sqlite3": "^11.10.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
