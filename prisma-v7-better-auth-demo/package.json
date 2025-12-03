@@ -1,0 +1,26 @@
+{
+  "name": "prisma-v7-better-auth-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@better-auth/cli": "https://pkg.pr.new/better-auth/better-auth/@better-auth/cli@ce002fb",
+    "@hono/node-server": "^1.19.6",
+    "@prisma/adapter-better-sqlite3": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "better-auth": "https://pkg.pr.new/better-auth/better-auth/better-auth@6459",
+    "dotenv": "^17.2.3",
+    "hono": "^4.10.7",
+    "prisma": "^7.0.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
