@@ -1,11 +1,11 @@
 import {
 	createRootRoute,
+	HeadContent,
 	Link,
 	Outlet,
-	ScrollRestoration,
+	Scripts,
 	useRouter,
 } from "@tanstack/react-router";
-import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
 import type * as React from "react";
 import { useEffect, useState } from "react";
 import { signOut, useSession } from "~/lib/auth-client";
@@ -24,32 +24,33 @@ import {
 import { Toaster } from "~/components/ui/sonner";
 
 export const Route = createRootRoute({
-	meta: () => [
-		{
-			charSet: "utf-8",
-		},
-		{
-			name: "viewport",
-			content: "width=device-width, initial-scale=1",
-		},
-		{
-			title: "Better Auth - TanStack Start Example",
-		},
-	],
-	links: () => [
-		{
-			rel: "stylesheet",
-			href: globalStylesheet,
-		},
-	],
-	component: RootComponent,
+	head: () => ({
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
+			},
+			{
+				title: "Better Auth - TanStack Start Example",
+			},
+		],
+		links: [
+			{
+				rel: "stylesheet",
+				href: globalStylesheet,
+			},
+		],
+	}),
+	shellComponent: RootComponent,
 });
 
 function RootComponent() {
 	const [theme, setTheme] = useState<"light" | "dark">("light");
-	const { data, isPending, error } = useSession();
+	const { data } = useSession();
 	const { navigate } = useRouter();
-	console.log();
 
 	useEffect(() => {
 		if (!data?.user) {
@@ -304,15 +305,14 @@ function RootComponent() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
-		<Html>
-			<Head>
-				<Meta />
-			</Head>
-			<Body>
+		<html lang="en">
+			<head>
+				<HeadContent />
+			</head>
+			<body>
 				{children}
-				<ScrollRestoration />
 				<Scripts />
-			</Body>
-		</Html>
+			</body>
+		</html>
 	);
 }
