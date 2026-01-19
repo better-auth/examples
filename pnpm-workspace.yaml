@@ -1,9 +1,10 @@
 packages:
-  - 'astro-example'
-  - 'browser-extension-example'
-  - 'expo-example'
-  - 'nextjs-mcp'
-  - 'nuxt-example'
-  - 'remix-example'
-  - 'svelte-kit-example'
-  - 'tanstack-example'
+    - astro-example
+    - browser-extension-example
+    - expo-example
+    - nextjs-mcp
+    - nuxt-example
+    - react-router-example
+    - svelte-kit-example
+    - tanstack-example
+    - react-router
