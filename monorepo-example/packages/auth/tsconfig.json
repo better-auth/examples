@@ -1,0 +1,11 @@
+{
+    "extends": "@monorepo-example/typescript-config/base.json",
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "skipLibCheck": true,
+        "lib": ["esnext", "dom", "dom.iterable"],
+        "types": ["node", "bun"]
+    },
+    "include": ["src"]
+}

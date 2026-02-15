@@ -1,0 +1,36 @@
+{
+    "name": "@monorepo-example/web",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "next build --turbo",
+        "dev": "next dev -p 3000 --turbo",
+        "lint": "next lint",
+        "typecheck": "tsc --noEmit",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@monorepo-example/auth": "workspace:*",
+        "@monorepo-example/shared": "workspace:*",
+        "@radix-ui/react-checkbox": "^1.3.3",
+        "@radix-ui/react-label": "^2.1.7",
+        "@radix-ui/react-separator": "^1.1.7",
+        "@radix-ui/react-slot": "^1.2.3",
+        "class-variance-authority": "catalog:",
+        "lucide-react": "^0.546.0",
+        "next": "^15.5.5",
+        "react": "^19.2.0",
+        "react-dom": "^19.2.0"
+    },
+    "devDependencies": {
+        "@monorepo-example/typescript-config": "workspace:*",
+        "@tailwindcss/postcss": "catalog:tailwind",
+        "@types/node": "catalog:",
+        "@types/react": "^19.2.2",
+        "@types/react-dom": "^19.2.2",
+        "tailwindcss": "catalog:tailwind",
+        "tw-animate-css": "catalog:",
+        "typescript": "catalog:"
+    }
+}

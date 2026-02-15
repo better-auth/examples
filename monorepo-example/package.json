@@ -1,0 +1,23 @@
+{
+  "name": "@monorepo-example/root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "apps:build": "turbo --filter \"./apps/*\" build",
+    "apps:dev": "turbo --filter \"./apps/*\" dev",
+    "apps:start": "turbo --filter \"./apps/*\" start",
+    "clean": "turbo --filter \"./packages/*\" clean && rm -rf node_modules",
+    "dev": "turbo --filter \"./packages/*\" dev",
+    "build": "turbo --filter \"./packages/*\" build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "turbo": "^2.5.0"
+  },
+  "packageManager": "pnpm@10.18.1",
+  "engines": {
+    "node": ">=18"
+  }
+}

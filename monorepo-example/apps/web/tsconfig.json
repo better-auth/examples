@@ -1,0 +1,22 @@
+{
+    "exclude": ["node_modules"],
+    "extends": "@monorepo-example/typescript-config/nextjs.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "baseUrl": ".",
+        "paths": {
+			"@/*": ["./*"]
+		}
+    },
+    "include": [
+        "next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts"
+    ]
+}
